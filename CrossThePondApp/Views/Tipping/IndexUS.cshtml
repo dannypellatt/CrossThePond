@@ -1,0 +1,66 @@
+﻿@model CrossThePondApp.Models.TippingModel
+
+<h1>Tipping in the United States</h1>
+
+
+<div class="grid-container">
+    <div class="grid-item left">
+        <h3>Tipping Explained:</h3>
+        <br />
+        <p>
+            Tipping in the United States is standard practice. It's important as the country does not have universal high wages.
+            Tipping etiquette is an outlier, due to the way that the United States operates.
+        </p>
+        <p>
+            The practice of tipping became formalized across the US in the 1960s.
+            Congress enacted regulations around federal minimum wages and ultimately determined that
+            entry-level service jobs receiving at least $30 a month in tips required only a minimum wage of $2.13/hr.
+            With this law, the ‘service industry’ was formalized and a status quo set.
+        </p>
+        <p>
+            Today, the federal minimum wage for those working positions is <italic>still</italic> $2.13/hr.
+            The rest of their income is solely from tips.
+            This means, for those working full time in these positions, their total monthly salary is only $340.80
+            Average rent for a one bedroom apartment is over $1700, so it's very important to those serving you!
+        </p>
+        <p>
+            To the right you'll find a rough guide to tipping in some common interactions.
+        </p>
+        <p class="notes">Tipping is not necessary for stores, coffee shops, hotel cleaning staff, however, if you feel like it, $1-$5 is always appreciated.</p>
+
+
+    </div>
+
+    <form class="grid-item center calc" asp-action="IndexUS">
+        <label>Amount:</label>
+        <p><input type="number" asp-for="ValueBill" /></p>
+        <br />
+
+        <p><input type="submit" value="Tip: 25" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
+        <p>sit-down restaurant with exceptional service</p>
+        <p><input type="submit" value="Tip: 20" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
+        <p>sit-down restaurant with good service, car-rides</p>
+        <p><input type="submit" value="Tip: 15" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
+        <p>sit-down restaurant with poor service</p>
+        <br />
+        <div class="grid-container result">
+            <div class="grid-item center resultBox">
+
+                <label>Tip:</label>
+                <p><input type="number" asp-for="@ViewData["result"]" /></p>
+            </div>
+            <div class="grid-item center resultBox">
+                <label>Total:</label>
+                <p><input type="number" asp-for="@ViewData["total"]" /></p>
+            </div>
+        </div>
+        <br />
+        <p>$1-$5 standard at:</p>
+        <p>for hotel cleaning staff</p>
+        <p>$1-$2 standard at:</p>
+        <p>at a bar per drink, </p>
+
+    </form>
+
+</div>
+<h1>Tipping in the United States</h1>

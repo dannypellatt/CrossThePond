@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="Views\Tipping\" />
+    <Folder Include="Views\LandingPage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Tipping\" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Dapper" />
+    <None Remove="MySql.Data" />
+    <None Remove="RestSharp" />
+    <None Remove="Views\LandingPage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="MySql.Data" Version="8.0.30" />
+    <PackageReference Include="RestSharp" Version="108.0.1" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .heading {
+       text-align: center;
+    }
+    .grid-container {
+        position: center;
+        display: inline-flex;
+        bottom: 0;
+    }
+    a img {
+        max-width: 450px;
+    }
+    #planeleft, #planeright{
+        max-width: 100px;
+    }
+    #sea {
+        max-width: 400px;
+    }
+</style>
+
+
+
+<div class="heading">
+    <h1>All you need to know</h1>
+    <h1>for your trans-atlantic trip</h1>
+</div>
+
+
+<br />
+<h2>Where are you headed?:</h2>
+<br /><br /><br /><br />
+
+
+<div class="grid-container">
+    <div class="grid-item left">
+        <div class="homeSection">
+            <a nav-link asp-area="" asp-controller="LandingPage" asp-action="IndexUS"><img src="images/USofA.png" alt="UK to USA" /></a>          
+        </div>
+
+
+    </div>
+
+    <div class="grid-item center">
+        <div class="pond">
+            <p><a ><img class="pondImg" id="planeleft" src="images/planeleft.png" alt="UK to USA" /></a></p>
+            <p><img class="pondImg" id="planeright" src="images/airplane.png" alt="UK to USA" /></p>
+            <p></p><img class="pondImg" id="sea" src="images/sea.png" alt="UK to USA" />
+        </div>
+    </div>
+
+    <div class="grid-item right">
+        <div class="homeSection">
+            <a nav-link asp-area="" asp-controller="LandingPage" asp-action="IndexUK"><img src="images/brit_tin.png" alt="USA to UK" /></a>
+        </div>
+    </div>
+</div>
+

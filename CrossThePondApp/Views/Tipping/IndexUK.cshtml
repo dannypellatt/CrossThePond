@@ -1,0 +1,57 @@
+﻿@model CrossThePondApp.Models.TippingModel
+
+<h1>Tipping in the United Kingdom</h1>
+
+<div class="grid-container">
+    <div class="grid-item left">
+        <h3>Tipping Explained:</h3>
+        <br />
+        <p>
+            Tipping is not expected in Great Britain the way it is in America.
+            Workers don't officially have to rely on their tips to live and all staff in the UK must be paid at least the National Minimum Wage.
+            Employers are also banned from topping up wages with tips from customers.
+        </p>
+        <p>
+            Although it's not necessary to tip in most places you would in the US, it's always greatly appreciated
+            (the National Minimum Wage does not meet the National Living Wage).
+        </p>
+        <p>
+            Possibly due to the fact that tipping is not necesssarily expected, you may find that wait staff, though polite,
+            will not be quite as attentive!
+        </p>
+        <p>
+            To the right you'll find a rough guide to tipping in some common interactions.
+        </p>
+        <p class="notes">Tipping is not necessary for stores, coffee shops, hotel staff, however, if you feel like it, £1-£5 is always appreciated.</p>
+
+
+    </div>
+
+    <form class="grid-item center calc" asp-action="IndexUK">
+        <br />
+        <label>Amount:</label>
+        <p><input type="number" asp-for="ValueBill" /></p>
+        <br />
+
+        <p><input type="submit" value="Tip: 15" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
+        <p>sit-down restaurant with exceptional</p>
+        <p><input type="submit" value="Tip: 10" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
+        <p>sit-down restaurant with exceptional service</p>
+        <div class="grid-container result">
+            <div class="grid-item center resultBox">
+
+                <label>Tip:</label>
+                <p><input type="number" asp-for="@ViewData["result"]" /></p>
+            </div>
+            <div class="grid-item center resultBox">
+                <label>Total:</label>
+                <p><input type="number" asp-for="@ViewData["total"]" /></p>
+            </div>
+        </div>
+        <br />
+        <p>£1-£5 standard at:</p>
+        <p>for hotel cleaning staff, tours</p>
+        <p>£1-£2 standard at:</p>
+        <p>delivery drivers, </p>
+
+    </form>
